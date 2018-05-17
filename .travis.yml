@@ -6,3 +6,9 @@ rvm:
   - 2.5.0
 cache:
   bundler: true
+
+before_install:
+  - bundle env
+  - gem install bundler
+  - bundle env
+  
