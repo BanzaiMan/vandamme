@@ -3,6 +3,6 @@ dist: trusty
 rvm:
   - 2.0.0
   - 2.4
-  - ruby-head
+  - 2.5.0
 cache:
   bundler: true
