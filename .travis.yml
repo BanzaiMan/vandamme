@@ -6,4 +6,5 @@ before_install:
   - md5deep -r ~/.rvm/rubies/ruby-head . > ~/before.txt
   - gem install bundler
   - md5deep -r ~/.rvm/rubies/ruby-head . > ~/after.txt
-  - diff ~/before.txt ~/after.txt
+after_script
+  - diff ~/before.txt ~/after.txt || true
