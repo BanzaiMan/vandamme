@@ -8,7 +8,4 @@ cache:
   bundler: true
 
 before_install:
-  - bundle env
-  - gem install bundler
-  - bundle env
-  
+  - bundle env  
