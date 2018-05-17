@@ -1,8 +1,9 @@
 language: ruby
 dist: trusty
 rvm:
-  - 2.0.0
-  - 2.4
   - ruby-head
-cache:
-  bundler: true
+before_install:
+  - md5deep . > ~/before.txt
+  - gem install bundler
+  - md5deep . > ~/after.txt
+  - diff before.txt after.txt
