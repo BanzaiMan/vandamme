@@ -3,7 +3,7 @@ dist: trusty
 rvm:
   - ruby-head
 before_install:
-  - md5deep ~/.rvm/rubies/ruby-head . > ~/before.txt
+  - md5deep -r ~/.rvm/rubies/ruby-head . > ~/before.txt
   - gem install bundler
-  - md5deep ~/.rvm/rubies/ruby-head . > ~/after.txt
+  - md5deep -r ~/.rvm/rubies/ruby-head . > ~/after.txt
   - diff ~/before.txt ~/after.txt
