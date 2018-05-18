@@ -1,20 +1,14 @@
 language: ruby
 dist: trusty
 rvm:
+  - 2.2.9
+  - 2.2.10
+  - 2.3.6
+  - 2.3.7
   - 2.4.3
   - 2.4.4
   - 2.5.0
+  - 2.5.1
   - ruby-head
 cache:
   bundler: true
-
-before_install:
-  - gem env
-  - gem update --system
-  - gem --version
-  
-before_script:
-  - gem env
-  - bundle env
-  - bundle exec ruby -e 'require "bundler/dep_proxy"'
-  - "bundle exec ruby -e 'puts $:' | tr : '\n' | sort"
