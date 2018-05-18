@@ -1,11 +1,20 @@
 language: ruby
 dist: trusty
 rvm:
-  - 2.0.0
-  - 2.4
+  - 2.4.4
   - 2.5.0
 cache:
   bundler: true
 
 before_install:
+  - gem env
   - bundle env  
+  - bundle exec ruby -e 'require "bundler/dep_proxy"'
+  - bundle exec ruby -e 'puts $:' | tr : '\n' | sort
+  
+before_script
+  - gem env
+  - bundle env
+  - bundle exec ruby -e 'require "bundler/dep_proxy"'
+  - bundle exec ruby -e 'puts $:' | tr : '\n' | sort
+  
