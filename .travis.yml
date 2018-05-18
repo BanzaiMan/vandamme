@@ -11,6 +11,8 @@ cache:
 
 before_install:
   - gem env
+  - gem update --system
+  - gem --version
   
 before_script:
   - gem env
