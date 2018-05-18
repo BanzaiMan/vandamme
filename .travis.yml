@@ -8,9 +8,6 @@ cache:
 
 before_install:
   - gem env
-  - bundle env  
-  - bundle exec ruby -e 'require "bundler/dep_proxy"'
-  - "bundle exec ruby -e 'puts $:' | tr : '\n' | sort"
   
 before_script:
   - gem env
