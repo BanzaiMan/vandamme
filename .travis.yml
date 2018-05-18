@@ -14,4 +14,9 @@ before_script:
   - bundle env
   - bundle exec ruby -e 'require "bundler/dep_proxy"'
   - "bundle exec ruby -e 'puts $:' | tr : '\n' | sort"
+  - gem install bundler
+  - gem env
+  - bundle env
+  - bundle exec ruby -e 'require "bundler/dep_proxy"'
+  - "bundle exec ruby -e 'puts $:' | tr : '\n' | sort"
   
